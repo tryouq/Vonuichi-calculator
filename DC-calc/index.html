@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100&display=swap" rel="stylesheet">
+    <title>Calculate</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"> </script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Калькулятор</h1>
+
+        <a href="aeheth.html">указатель ссылки</a>
+
+        <div class="information">
+            <p>Поможем рассчитать вам примерную цену для вашего проекта</p>
+
+            Как пользоваться:
+            <ul>
+                <li>Введите название комнаты</li>
+                <li>Введите площадь поверхности под окраску *</li>
+                <li>Выберите способ нанесения *</li>
+                <li>Выберите краску, которой хотите покрасить *</li>
+            </ul>
+            <p>Если хотите <b>поменять способ нанесения</b>, то просто выберите другой, <b>поменять краску</b> - выберите новую краску, <b>поменять площадь</b> - измените площадь и заного выберите способ нанесения или краску</p>
+        </div>
+
+        <div class="variatOfWork">
+            <h2>Выберите тип работы:</h2>
+
+            <div>
+                <input type="checkbox" id="exterior" name="exterior" />
+                <label for="exterior" class="exterior">Экстерьерные</label>
+            </div>
+            <div>
+                <input type="checkbox" id="interior" name="interior" checked/>
+                <label for="interior" class="interior">Интерьерные</label>
+            </div>
+        </div>
+
+        <div class="extiriorWork" id = "hiddenextirior">
+            <h2 class="titleNameOfFront">Фасад</h2>
+            <div class="front">
+                <label for="surfaceAreaFront" class="surfaceOfAreaFront">Площадь поверхности:</label>
+                <input type="text" id="surfaceAreaFront" placeholder="м.кв." name="surfaceAreaFront" required minlength="4" maxlength="15" size="20" />
+
+                <legend>Выберите способ нанесения:</legend>
+                <div>
+                  <input type="radio" id="brush front" name="droneFront" value="brush front" checked />
+                  <label for="brush front">Кисть</label>
+                </div>
+                <div>
+                  <input type="radio" id="roller front" name="droneFront" value="roller front" />
+                  <label for="roller front">Валик</label>
+                </div>
+                <div>
+                  <input type="radio" id="sprayGun front" name="droneFront" value="sprayGun front" />
+                     <label for="sprayGun front">Краскопульт</label>
+                </div>
+                
+            </div>
+            
+        </div>
+
+
+        <div class="interiorWork" id = "hiddeninterior">
+            <h2 class="titleNameOfRooms">Комнаты</h2>
+
+            <label for="roomNumberSelect" class="roomNumberSelect">Выберите количество комнат:</label>
+            <select name="countRoom" id="roomNumberSelect">
+                <option value="0">Не выбрано</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
+
+            <div class="numbersOfRoom" id="numbersOfRoom">
+                <div class="numbersOfRoom-row" id="numbersOfRoom-row">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="popup" id="popup">
+            <div class="popup-row">
+                <div class="close" onclick="hiddpopup()">  </div>
+
+                <div class="products">
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name1">Little Greene, Absolute Matt Emulsion </div>
+                            <div class="price" id="price1">12390 р.</div>
+                            <div class="volume" id="volume1">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('1')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name2">Little Greene, Intelligent Matt Emulsion </div>
+                            <div class="price" id="price2">13650 р.</div>
+                            <div class="volume" id="volume2">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('2')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name3">Little Greene, Intelligent Eggshell </div>
+                            <div class="price" id="price3">14595 р.</div>
+                            <div class="volume" id="volume3">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('3')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name4">Little Greene, Flat Oil Eggshell </div>
+                            <div class="price" id="price4">7938 р.</div>
+                            <div class="volume" id="volume4">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('4')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name5">Little Greene, Intelligent Masonry Paint </div>
+                            <div class="price" id="price5">11655 р.</div>
+                            <div class="volume" id="volume5">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('5')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name6">Zoffany, Elite Emulsion </div>
+                            <div class="price" id="price6">15600 р.</div>
+                            <div class="volume" id="volume6">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('6')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name7">Zoffany, True Matt </div>
+                            <div class="price" id="price7">17000 р.</div>
+                            <div class="volume" id="volume7">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('7')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name8">Argile, Laque mate </div>
+                            <div class="price" id="price8">24000 р.</div>
+                            <div class="volume" id="volume8">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('8')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name9">Argile, Mat Velouté </div>
+                            <div class="price" id="price9">22000 р.</div>
+                            <div class="volume" id="volume9">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('9')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name10">Argile, Mat Profond </div>
+                            <div class="price" id="price10">18250 р.</div>
+                            <div class="volume" id="volume10">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('10')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name11">Argile, Laque Satinee Interieure </div>
+                            <div class="price" id="price11">21900 р.</div>
+                            <div class="volume" id="volume11">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('11')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name12">Argile, Blanc Plafond </div>
+                            <div class="price" id="price12">15750 р.</div>
+                            <div class="volume" id="volume12">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('12')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name13">Argile, Nature Mat </div>
+                            <div class="price" id="price13">18900 р. </div>
+                            <div class="volume" id="volume13">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('13')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name14">Argile, Nature Velours </div>
+                            <div class="price" id="price14">22900 р. </div>
+                            <div class="volume" id="volume14">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('14')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name15">Argile, Nature Satin </div>
+                            <div class="price" id="price15">22650 р. </div>
+                            <div class="volume" id="volume15"> 5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('15')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                    <div class="discription">
+                        <div class="description-row">
+                            <div class="picturePaint"> <img class="picturePaintFoto" src="https://static.tildacdn.com/stor3930-6631-4930-b230-643862393262/43512436.jpg" alt="Little Greene"> </div>
+                            <div class="name" id="name16">Argile, Satin Couvrant </div>
+                            <div class="price" id="price16">15400 р. </div>
+                            <div class="volume" id="volume16">5 л.</div>
+                            <div> <button class="pick" onclick="newRoomPaintName('16')"> Выбрать </button> </div>
+                            <div> <button class="more"> Подробнее </button> </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+            </div>
+        </div>
+    
+
+        <script src="./js/calc.js"></script>
+        <script src="./js/settime.js"></script>
+</body>
+
+</html>

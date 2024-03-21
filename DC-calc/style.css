@@ -1,0 +1,470 @@
+*{
+    font-family: 'Roboto';
+}
+@media (min-width: 1200px) {
+    .container{
+        width:1200px;
+        margin:0 auto;
+        /*border:1px solid grey;*/
+    }
+    h1{
+        font-size:34px;
+        color:#23125A;
+        margin:12px auto;
+        text-align: center;
+    }
+    h2{
+        font-size: 24px;
+    }
+    .nameOfRoom, .surfaceOfAreaRoom, .surfaceOfAreaFront{
+        font-size: 18px;
+        /*border: 1px solid blue;*/
+        display: inline-block;
+        flex-direction: row;
+        width: 180px;
+    }
+    #roomNumberSelect{
+        width: 100px;
+    }
+    .exterior, .interior{
+        font-size: 18px;
+    }
+    .roomNumberSelect{
+        margin-bottom: 10px;
+        padding-left: 5px;
+        font-size: 19.5px;
+        width: max-content;
+        /*border: 1px solid rgb(255, 0, 255);*/
+        display: inline-block;
+    }
+    #roomNumberSelect{
+        width: 100px;
+    }
+    .applicationOption{
+        font-size: 18px;
+        margin-top: 5px;
+        width: 250px;
+        /*border: 1px solid #23125A;*/
+    }
+    input[type="radio"] {
+        font-size: 18px;
+    }
+    .mainRoom{
+    display: block;
+    display: flex;
+    }
+    .itogVarint{
+        display: none;
+        padding: 10px;
+        border: 1px solid #3e3d42;
+        border-radius: 10px;
+        width: 350px;
+        margin-bottom: 10px;
+    }
+    .room{
+        margin-right: 5px;
+        width: 425px;
+    }
+}
+@media (min-width: 960px) and (max-width: 1199.98px) {
+    .container{
+        width:960px;
+        margin:0 auto;
+        /*border:1px solid grey;*/
+    }
+    h1{
+        font-size:34px;
+        color:#23125A;
+        margin:12px auto;
+        text-align: center;
+    }
+    h2{
+        font-size: 24px;
+    }
+    .nameOfRoom, .surfaceOfAreaRoom, .surfaceOfAreaFront{
+        font-size: 18px;
+        /*border: 1px solid blue;*/
+        display: inline-block;
+        flex-direction: row;
+        width: 180px;
+    }
+    #roomNumberSelect{
+        width: 100px;
+    }
+    .exterior, .interior{
+        font-size: 18px;
+    }
+    .roomNumberSelect{
+        margin-bottom: 10px;
+        padding-left: 5px;
+        font-size: 19.5px;
+        width: max-content;
+        /*border: 1px solid rgb(255, 0, 255);*/
+        display: inline-block;
+    }
+    #roomNumberSelect{
+        width: 100px;
+    }
+    .applicationOption{
+        font-size: 18px;
+        margin-top: 5px;
+        width: 250px;
+        /*border: 1px solid #23125A;*/
+    }
+    input[type="radio"] {
+        font-size: 18px;
+    }
+    .mainRoom{
+    display: block;
+    display: flex;
+    }
+    .itogVarint{
+        display: none;
+        padding: 10px;
+        border: 1px solid #3e3d42;
+        border-radius: 10px;
+        width: 350px;
+        margin-bottom: 10px;
+    }
+    .room{
+        margin-right: 5px;
+        width: 425px;
+    }
+}
+@media (min-width: 850px) and (max-width: 959.98px) {
+    .container{
+        width:100%;
+        margin:0 auto;
+        /*border:1px solid grey;*/
+    }
+    h1{
+        font-size:34px;
+        color:#23125A;
+        margin:12px auto;
+        text-align: center;
+    }
+    h2{
+        font-size: 24px;
+    }
+    .nameOfRoom, .surfaceOfAreaRoom, .surfaceOfAreaFront{
+        font-size: 18px;
+        /*border: 1px solid blue;*/
+        display: inline-block;
+        flex-direction: row;
+        width: 180px;
+    }
+    #roomNumberSelect{
+        width: 100px;
+    }
+    .exterior, .interior{
+        font-size: 18px;
+    }
+    .roomNumberSelect{
+        margin-bottom: 10px;
+        padding-left: 5px;
+        font-size: 19.5px;
+        width: max-content;
+        /*border: 1px solid rgb(255, 0, 255);*/
+        display: inline-block;
+    }
+    #roomNumberSelect{
+        width: 100px;
+    }
+    .applicationOption{
+        font-size: 18px;
+        margin-top: 5px;
+        width: 250px;
+        /*border: 1px solid #23125A;*/
+    }
+    input[type="radio"] {
+        font-size: 18px;
+    }
+    .mainRoom{
+    display: block;
+    display: flex;
+    }
+    .itogVarint{
+        display: none;
+        padding: 10px;
+        border: 1px solid #3e3d42;
+        border-radius: 10px;
+        width: 350px;
+        margin-bottom: 10px;
+    }
+    .room{
+        margin-right: 5px;
+        width: 425px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 849.98px) {
+    .container{
+        width: 100%;
+        margin:0 auto;
+    }
+    h1{
+        font-size:28px;
+        /*color:#23125A;*/
+        margin:12px auto;
+        text-align: center;
+    }
+    h2{
+        font-size: 19px;
+    }
+    .exterior, .interior{
+        font-size: 16px;
+    }
+    .nameOfRoom, .surfaceOfAreaRoom, .surfaceOfAreaFront{
+        font-size: 16px;
+        margin-top: 2px;
+        margin-bottom: 3px;
+        /*border: 1px solid blue;*/
+        display: inline-block;
+        flex-direction: row;
+        width: 200px;
+    }
+    .roomNumberSelect{
+        margin-bottom: 10px;
+        padding-left: 5px;
+        font-size: 16px;
+        width: max-content;
+        /*border: 1px solid rgb(255, 0, 255);*/
+        display: inline-block;
+    }
+    #roomNumberSelect{
+        width: 100px;
+    }
+    .applicationOption{
+        font-size: 16px;
+        margin-top: 5px;
+        width: 200px;
+        /*border: 1px solid #23125A;*/
+    }
+    input[type="radio"] {
+        font-size: 16px;
+    }
+    .mainRoom{
+    display: block;
+    width: 100%;
+    /*display: flex;*/
+    }
+    .itogVarint{
+        display: none;
+        padding: 10px;
+        border: 1px solid #3e3d42;
+        border-radius: 10px;
+        width: auto 0;
+        margin-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .room{
+        width: auto 0;
+    }
+}
+input[type="text"] {
+width: 210px;
+}
+
+.variatOfWork{
+    /*border: 1px solid red;*/
+}
+.interiorWork{
+    width: 100%;
+    /*border: 1px solid green;*/
+}
+
+#hiddenextirior{
+    display: none;
+}
+#hiddeninterior{
+    display: block;
+}
+/*.mainRoom{
+    display: block;
+    display: flex;
+}*/
+.room, .front{
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #3e3d42;
+    border-radius: 10px;
+}
+.room-row{
+    display: inline-block;
+}
+.numbersOfRoom{
+    padding: 10px 0px 10px 0px;
+    /*border: 1px solid #23125A;*/
+    display: block;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+/*.itogVarint{
+    display: none;
+    padding: 10px;
+    border: 1px solid #3e3d42;
+    border-radius: 10px;
+    width: max-content;
+    margin-bottom: 10px;
+}*/
+.acceptBlock{
+    margin-top: 5px;
+}
+.accept{
+    font-size: 13px;
+    tab-size: 16px;
+    margin-right: 5px;
+    width: 130px;
+    padding: 2px;
+    color:rgb(46, 46, 46);
+    background-color: white;
+    border: 1px solid rgb(46, 46, 46);
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgb(38, 40, 46);
+}
+.accept:hover{
+    transform: scale(1.04);
+}
+.pickPaintBlock{
+    margin-top: 5px;
+}
+.pickPaint{
+    font-size: 13px;
+    tab-size: 16px;
+    margin-right: 5px;
+    width: 130px;
+    padding: 2px;
+    color: white;
+    background-color: rgb(46, 46, 46);
+    border: 1px solid rgb(46, 46, 46);
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgb(38, 40, 46);
+}
+.pickPaint:hover{
+    transform: scale(1.04);
+}
+.discription{
+    border: 1px solid #3e3d42;
+    border-radius: 5px;
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    background: white;
+    margin: 10px 5px 0px 5px;
+    display: inline-block;
+    justify-content: space-between;
+}
+.discription-row{
+    display: block;
+    text-align: center;
+}
+.picturePaint{
+    width: 120px;
+    height: 120px;
+}
+.picturePaintFoto{
+    width: 120px;
+    height: 120px;
+}
+.name, .price, .volume{
+    font-size: 14px;
+    /*border: 1px solid slateblue;*/
+    width: 120px;
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2px;
+
+}
+.name{
+    height: 50px;
+    align-items: center;
+}
+.price, .volume{
+    height: max-content;
+}
+.pick, .more{
+    font-size: 13px;
+    tab-size: 16px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 100px;
+}
+.pick{
+    margin-top: 3px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+}
+.pick:hover{
+    transform: scale(1.1);
+}
+.more{
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border: 1px solid black;
+}
+.more:hover{
+    transform: scale(1.1);
+}
+#popup{
+    display: none;
+}
+.popup{
+    overflow-y: auto;
+    position: absolute;
+    margin: 0 15%;
+    border-radius: 10px;
+    z-index: 100px;
+    top: 60px;
+    background: rgba(167, 158, 158, 0.7);
+    width: 70%;
+    height: 85%;
+    padding: 10px 10px 20px 10px;
+}
+.popup-row{
+    padding-top: 37px;
+    text-align: center;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.2;
+    cursor: pointer;
+    transition: opacity ease 0.5s;
+
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.products{
+    text-align: center;
+    /*width:800px;
+    display:flex;
+    margin:0 auto;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;*/
+}
